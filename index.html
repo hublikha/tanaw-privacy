@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanaw — Website Intelligence | Hublikha</title>
+<meta name="description" content="Tanaw shows any website's hosting, IP, DNS, SSL certificate and technology stack in one click. A browser extension by Hublikha.">
+<meta name="robots" content="index, follow">
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#18181b; --muted:#52525b; --line:#e4e4e7; --card:#fafafa; --accent:#2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0a0a0b; --fg:#e4e4e7; --muted:#a1a1aa; --line:#27272a; --card:#141416; --accent:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 56px 20px 80px; background: var(--bg); color: var(--fg);
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  .logo {
+    width: 44px; height: 44px; border-radius: 11px;
+    background: linear-gradient(150deg, #2563eb, #7c3aed);
+    display: grid; place-items: center; margin-bottom: 20px;
+  }
+  .logo span {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 3px solid #fff; display: block;
+  }
+  h1 { font-size: 34px; letter-spacing: -0.03em; margin: 0 0 8px; }
+  .tagline { font-size: 18px; color: var(--muted); margin: 0 0 10px; }
+  .etym { font-size: 14px; color: var(--muted); margin: 0 0 36px; font-style: italic; }
+  h2 { font-size: 20px; letter-spacing: -0.015em; margin: 44px 0 12px; }
+  h3 { font-size: 15px; margin: 0 0 4px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 18px 0; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 16px; background: var(--card); }
+  .card p { font-size: 14.5px; color: var(--muted); margin: 0; }
+  ul { padding-left: 22px; } li { margin-bottom: 7px; }
+  .callout {
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 14px 16px; margin: 18px 0; font-size: 15px; background: var(--card);
+  }
+  dl { margin: 0; }
+  dt { font-weight: 600; margin-top: 16px; font-size: 15px; }
+  dd { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { margin-right: 14px; }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="logo" aria-hidden="true"><span></span></div>
+  <h1>Tanaw</h1>
+  <p class="tagline">See what any website is actually made of — in one click.</p>
+  <p class="etym">tanaw (Tagalog): to view; the vista; what you see looking out over something.</p>
+
+  <p>
+    Tanaw is a browser extension that turns any domain into a complete diagnostic report:
+    who hosts it, its IP address and network operator, DNS records, SSL certificate status,
+    and the technologies it is built with — plus security, SEO, accessibility and performance
+    checks. Built for developers, hosting support agents and web agencies.
+  </p>
+
+  <h2>What it shows</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Hosting</h3>
+      <p>Host, IP, network operator and CDN — correlated across six signals, and honest when
+         an origin is hidden behind a proxy rather than naming the proxy as the host.</p>
+    </div>
+    <div class="card">
+      <h3>DNS</h3>
+      <p>A, AAAA, CNAME, NS, MX, TXT, CAA and SOA records, plus who runs the zone, who handles
+         email, and whether SPF, DKIM and DMARC are configured correctly.</p>
+    </div>
+    <div class="card">
+      <h3>SSL</h3>
+      <p>Certificate authority, expiry, covered domains and HSTS — separating what the browser
+         verified from what came from public certificate transparency logs.</p>
+    </div>
+    <div class="card">
+      <h3>Technology</h3>
+      <p>Over 150 signatures across CMS platforms, frameworks, hosting, analytics and AI tools,
+         each with a version, a confidence score and the evidence behind it.</p>
+    </div>
+  </div>
+
+  <p>
+    Plus security header analysis, SEO checks with a search-result preview, accessibility
+    testing with real contrast measurement, Core Web Vitals, and a privacy report showing
+    which third parties receive your visitors' data.
+  </p>
+
+  <h2>Check any domain</h2>
+  <p>
+    Type a domain into the search box to diagnose a site you are not currently visiting —
+    built for support agents working on a customer's website while looking at their own
+    dashboard. Every fact has a copy button, and a full scan takes well under a second.
+  </p>
+
+  <h2>Privacy</h2>
+  <div class="callout">
+    Page content is processed entirely on your device and is never transmitted. Technology,
+    security, SEO, accessibility and performance checks run fully offline. Optional DNS,
+    registrar, IP and certificate lookups are disabled by default — and when you enable them,
+    only the domain and IP are sent. Never page content, never browsing history, never analytics.
+  </div>
+  <p><a href="privacy.html">Read the full privacy policy →</a></p>
+
+  <h2 id="support">Support</h2>
+  <p>Questions, bug reports and feature requests are all welcome.</p>
+
+  <dl>
+    <dt>Email</dt>
+    <dd><a href="mailto:hublikha@gmail.com">hublikha@gmail.com</a> — we aim to reply within two business days.</dd>
+
+    <dt>Reporting a bug</dt>
+    <dd>
+      Please include the website address you were checking, which section showed the problem
+      (Hosting, DNS, SSL, Technology and so on), what you expected, and your Chrome version.
+      A screenshot of the panel helps most of all.
+    </dd>
+
+    <dt>Requirements</dt>
+    <dd>Chrome 116 or later, or any Chromium browser at that version — Edge, Brave, Opera, Arc.</dd>
+  </dl>
+
+  <h2>Common questions</h2>
+
+  <dl>
+    <dt>Why does it need access to all websites?</dt>
+    <dd>
+      Tanaw analyzes whichever site you choose to inspect, and that can be any site on the web,
+      so the permission cannot be narrowed to a fixed list. It is used only for the tab you are
+      actively analyzing, and only while the panel is open.
+    </dd>
+
+    <dt>Why is some data missing until I reload the page?</dt>
+    <dd>
+      Response headers and the server IP are captured as the page loads. If the tab was already
+      open before the extension started, that moment has passed — reload once and it appears.
+    </dd>
+
+    <dt>Why can't it read the SSL certificate directly?</dt>
+    <dd>
+      No browser extension API exposes the certificate of the page you are viewing. Chrome
+      simply does not offer it. Tanaw reads public Certificate Transparency logs instead, and
+      labels clearly which facts came from the live connection and which came from the logs.
+    </dd>
+
+    <dt>Does it work offline?</dt>
+    <dd>
+      Yes. Technology detection, security headers, SEO, accessibility and performance are all
+      computed locally and work with no network at all. Only DNS, registrar, IP ownership and
+      certificate details require lookups, and those are optional.
+    </dd>
+  </dl>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:hublikha@gmail.com">Contact</a>
+    <br><br>
+    © 2026 Hublikha — a digital solutions studio.
+    Tanaw is a website diagnostics extension for Chromium browsers.
+  </footer>
+
+</main>
+</body>
+</html>

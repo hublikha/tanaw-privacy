@@ -41,13 +41,15 @@
 <main>
 
   <h1>Privacy Policy — Tanaw</h1>
-  <p class="meta">Last updated: 3 August 2026 · Tanaw is a browser extension published by Hublikha.</p>
+  <p class="meta">Last updated: 13 September 2026 · Tanaw is a browser extension published by Hublikha.</p>
 
   <div class="callout">
     <strong>The short version</strong>
     We collect nothing. There are no analytics, no tracking, and no accounts. The content
-    of pages you visit is processed inside your own browser and is never transmitted to us
-    or to anyone else.
+    of pages you inspect is processed inside your own browser and is never sent to Hublikha.
+    A remote-domain check you explicitly start contacts the domain you entered, and optional
+    public lookups send only the domain name or IP address needed for that lookup to the named
+    provider.
   </div>
 
   <h2>What Tanaw does</h2>
@@ -73,7 +75,9 @@
     <li>Page markup, meta tags, headings, links, images and script references</li>
     <li>HTTP response headers and the resolved server IP address</li>
     <li>Cookie attribute flags — <code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code> and expiry.
-      <strong>Cookie values are never read.</strong></li>
+      Tanaw may receive the relevant <code>Set-Cookie</code> response header long enough to derive
+      these flags. <strong>Cookie values are discarded immediately and are never retained, saved
+      or exported.</strong></li>
     <li>Page performance timings, such as load and rendering measurements</li>
     <li>The names of JavaScript global variables, used to identify frameworks and libraries</li>
   </ul>
@@ -83,6 +87,14 @@
     Your settings, and any scan you explicitly choose to save, are kept in your browser's local
     extension storage. They are not synchronized across devices and are not transmitted to us.
     Removing the extension deletes all of it.
+  </p>
+
+  <h2>Remote-domain checks</h2>
+  <p>
+    When you type a domain into Tanaw and explicitly run a remote-domain check, your browser
+    sends requests directly to that target domain. The target can receive ordinary connection
+    metadata, such as your IP address and request headers, just as it would from a normal direct
+    web request. Hublikha does not proxy or receive this traffic.
   </p>
 
   <h2>Optional lookups that leave your device</h2>

@@ -104,10 +104,12 @@
 
   <h2>Privacy</h2>
   <div class="callout">
-    Page content is processed entirely on your device and is never transmitted. Technology,
-    security, SEO, accessibility and performance checks run fully offline. Optional DNS,
-    registrar, IP and certificate lookups are disabled by default — and when you enable them,
-    only the domain and IP are sent. Never page content, never browsing history, never analytics.
+    Page content is processed on your device and is never sent to Hublikha. Technology,
+    security, SEO, accessibility and performance checks run locally. If you explicitly check
+    another domain, your browser contacts that target domain directly. Optional DNS, registrar,
+    IP and certificate lookups are disabled by default; when enabled, only the domain name or
+    IP address needed for the lookup is sent to the named public provider. Never page content,
+    never browsing history, never analytics.
   </div>
   <p><a href="privacy.html">Read the full privacy policy →</a></p>
 
@@ -132,11 +134,13 @@
   <h2>Common questions</h2>
 
   <dl>
-    <dt>Why does it need access to all websites?</dt>
+    <dt>Why does it need access to websites?</dt>
     <dd>
-      Tanaw analyzes whichever site you choose to inspect, and that can be any site on the web,
-      so the permission cannot be narrowed to a fixed list. It is used only for the tab you are
-      actively analyzing, and only while the panel is open.
+      Tanaw can inspect any HTTP or HTTPS site you choose, so its site access cannot be narrowed
+      to a fixed domain list. It uses that access for the site you actively analyze, for explicit
+      remote-domain checks that you start, and, if you enable optional lookups, for requests to
+      the named public lookup providers. It does not request browser cookie access or collect
+      your browsing history.
     </dd>
 
     <dt>Why is some data missing until I reload the page?</dt>
